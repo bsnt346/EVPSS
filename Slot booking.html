@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{ 
+            
+        background-image:url('https://ev.delhi.gov.in/assets/switch_delhi/images/Charging-station-carousel.jpeg');
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+        backface-visibility: inherit;
+        
+        }
+        p{
+        text-align: start;
+        }
+        .txtbox{
+            height: 20px;width: 600px;
+            
+
+        }
+        #df{
+            font-variant:initial
+
+        }
+        h2{
+            font-size:medium
+        
+        }
+        h1{
+            font-size:xx-large;
+            font-family:Arial, Helvetica, sans-serif;
+            color: #e4edee;
+            margin-left: 450px;
+            margin-right: 300px;
+            background-color: black;
+            
+        
+            
+        }
+        .fgh{
+            margin:3%;
+            position: relative;
+
+        }
+        .first-txt{
+            position:absolute;
+        }
+        .button{
+            background-color:blue;
+            font-size: x-large;
+            
+            font-display: inline-block;
+            border:none;
+            padding:6px;
+            padding-right: 30px;
+            padding-left: 30px;
+            font-size:30px;
+            cursor: pointer;
+
+        }
+        .button:hover{
+            background-color: rgb(234, 255, 0);
+        }
+        h3{
+            
+            font-weight: bolder;
+            font-size: xx-large;
+            background-color: rgb(255, 77, 0);
+            border-radius: 100px;
+            background-size: 10cm;
+            margin-right: 700px;
+            text-align: center;
+        }
+        h4{
+            font-size: 50px;
+            text-decoration-color: burlywood;
+            text-emphasis-color: white;
+            text-align: center;
+            color: rgb(85, 37, 2);
+            background-color: yellow;
+        }
+        .container{
+            
+            
+            
+            
+
+        }
+        
+        .box1{
+            position:relative;
+            left:750px;
+            top:-850px;
+            border: 10px solid rgb(33, 14, 205);
+            width: 500px;
+            height: 800px;
+
+            
+            
+            
+        }
+        h6{
+            font-size: 25px;
+            text-align: center;
+            background-color: white;
+        }
+            
+
+
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class ="fgh"> 
+    
+
+
+        <h1 class = "frsttext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOOK YOUR SLOT NOW</h1>
+      <br>
+      <br>
+      <br>
+      <form  action = "/myaction.php" name="myForm" onsubmit="return validateForm()" method ="post">
+        <h3><label for = "vNumber">Vehicle Number:</label></h3>
+        <br>
+        <br>
+
+        <input type="text" class ="txtbox" id = "name"
+        name = "vNumber" required>
+        
+        <b><span class="formerror"></span></b>
+        <br>
+        <br>
+        
+        <h3><label for="vname" id = "df" >Vehicle registered name:</label></h3>
+        <br>
+        <br>
+        <input type = "text" class="txtbox" name = "vname">
+        <br>
+        <br>
+        <br>
+        <h3>choose your vehicle type</h3>
+        <br>
+        <h2>
+        <div>
+            two-wheeler &nbsp;&nbsp;<input type ="radio" name = "vehicle type">
+        </div>
+        <div>
+            three-wheeler <input type ="radio" name = "vehicle type">
+
+        </div>
+        <div>
+            four-wheeler &nbsp; <input type= "radio" name = "vehicle type">
+        </div>
+        </h2>
+        <br>
+        <h3>Battery percentage:</h3>
+        <br>
+        
+        <input type="number">
+        
+        <br>
+        <br>
+        <br>
+        <button  class="button">submit</button>
+
+
+
+      </form>
+      <div class="container">
+        <div class ="box1">
+            <h4 class="heading"> Process for booking slot </h4>
+            <h6 class="details">Step 1:Fill all the details <br><br>Step 2.Click on submit button<br><br>Step 3.Choose the payment option<br><br>Step 4.Complete the payment <br><br>Step 5.Timing and Location of power station where your slot is booked is displayed on screen</details></h6>
+        </div>
+        
+    </div>
+
+
+</body>
+
+<script>
+
+    function seterror(id , error){
+        element = document.getElementById(id);
+        element.getElementByClassName('formerror')[0].innerHTML = error;
+
+        
+    }
+    function validateForm(){
+        var returnval = true;
+
+
+        var name = document.forms['myForm']["vNumber"].value;
+
+        if (name.length<10){
+            seterror("name", "invalid vehicle number");
+            returnval = false;
+        }
+
+        return returnval;
+    }
+
+
+</script>
